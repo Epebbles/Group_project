@@ -4,6 +4,7 @@ import './App.css';
 import Login from './components/Login';
 import Register from './components/Register';
 import LoginReg from './views/LoginReg';
+import VacasaMain from './views/VacasaMain';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Login path="login"/>
         <Register path="register"/>
         <LoginReg path="loginreg"/>
+        <VacasaMain path="vacasa"/>
       </Router>
 
     </div>
