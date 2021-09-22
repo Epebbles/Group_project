@@ -21,8 +21,7 @@ const RentalForm = (props) => {
             description,
             photoUrl,
         };
-        axios
-            .post("http://localhost:8000/api/vacasa", newRentalData)
+        axios.post("http://localhost:8000/api/vacasa", newRentalData)
             .then((newRental) => {
                 setName("");
                 setPhotoUrl("");
@@ -33,8 +32,8 @@ const RentalForm = (props) => {
             })
             .catch((err) =>
                 {
-                    console.log(err.response.data.errors);
-                    setErrors(err.response.data.errors.errors);
+                    console.log(err);
+                    setErrors(err);
                 }
             );
     };
@@ -68,8 +67,8 @@ const RentalForm = (props) => {
                         type="text"
                         name="location"
                         id="location"
-                        onChange={(e) => setPrice(e.target.value)}
-                        value={price}
+                        onChange={(e) => setLocation(e.target.value)}
+                        value={location}
                     />
                 </div>
                 <div>

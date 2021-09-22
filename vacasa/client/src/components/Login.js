@@ -21,7 +21,7 @@ const Login = () => {
             console.log(response.cookie);
             console.log(response);
             setSuccessMsg(response.data.message)
-            navigate("/vacasa");
+            navigate("/api/vacasa");
         })
         .catch((err) => {
             console.log(err.response);

@@ -11,17 +11,16 @@ const EditRental = (props) => {
     const [description, setDescription] = useState("");
 
     useEffect(() => {
-        axios
-        .get(`http://localhost:8000/api/vacasa/${id}`)
-        .then((queriedRental) => {
-            console.log(queriedRental.data);
-            setName(queriedRental.data);
-            setPhotoUrl(queriedRental.data);
-            setLocation(queriedRental.data);
-            setPrice(queriedRental.data);
-            setDescription(queriedRental.data);
-        })
-        .catch((err) => console.log(err));
+        axios.get(`http://localhost:8000/api/vacasa/${id}`)
+            .then((queriedRental) => {
+                console.log(queriedRental.data);
+                setName(queriedRental.data);
+                setPhotoUrl(queriedRental.data);
+                setLocation(queriedRental.data);
+                setPrice(queriedRental.data);
+                setDescription(queriedRental.data);
+            })
+            .catch((err) => console.log(err));
     }, []);
 
     const handleSubmitUpdate = (e) => {
@@ -34,7 +33,7 @@ const EditRental = (props) => {
                 price,
                 description,
             })
-            .then((updatedDoc) => navigate("/"))
+            .then((updatedDoc) => navigate("/api/vacasa"))
             .catch((err) => console.log(err));
     };
     return (

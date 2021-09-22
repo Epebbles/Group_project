@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import { Router } from '@reach/router';
 import './App.css';
 import Login from './components/Login';
@@ -14,8 +14,8 @@ function App() {
         <Login path="login"/>
         <Register path="register"/>
         <LoginReg path="loginreg"/>
-        <VacasaMain path="vacasa"/>
-        <EditRental path="vacasa/:vacasaId/edit"/>
+        <VacasaMain path="/api/vacasa"/>
+        <EditRental path="/api/vacasa/:vacasaId/edit"/>
       </Router>
 
     </div>

@@ -8,8 +8,7 @@ const DisplayAllRentals = (props) => {
 
     useEffect(() => {
         console.log("useeffect triggered");
-        axios
-            .get("http://localhost:8000/api/vacasa")
+        axios.get("http://localhost:8000/api/vacasa")
             .then(
                 (allRentals) => {
                     console.log(allRentals.data);
@@ -20,9 +19,8 @@ const DisplayAllRentals = (props) => {
     }, [formSubmittedBoolean]);
 
     const deleteRental = (id) => {
-        axios
-            .delete(`http://localhost:8000/api/vacasa/${id}`)
-            .then((response) => {
+        axios.delete(`http://localhost:8000/api/vacasa/${id}`)
+            .then((res) => {
                 console.log("deletion successful");
                 setFormSubmittedBoolean(!formSubmittedBoolean);
             })
@@ -35,9 +33,9 @@ const DisplayAllRentals = (props) => {
                 rentals.map((rental, index) => (
                     <div key={index}>
                         <h2>
-                            <Link to={`/${rental._id}/edit`}>EDIT</Link>
+                            <Link to={`/api/vacasa/${rental._id}/edit`}>EDIT</Link>
                         </h2>
-                        <Link to={`/${rental._id}`}>DISPLAY RENTALS INFO</Link>
+                        <Link to={`/api/vacasa/${rental._id}`}>DISPLAY RENTALS INFO</Link>
                         <p>{rental.name}</p>
                         <img src={rental.photoUrl} alt="" />
                         {/* When button clicked, ignite deleteRestaurant function with restaurant _id */}
