@@ -21,7 +21,7 @@ const DisplayAllRentals = (props) => {
 
     const deleteRental = (id) => {
         axios
-            .delete(`http://localhost:8000/api/restaurant/${id}`)
+            .delete(`http://localhost:8000/api/vacasa/${id}`)
             .then((response) => {
                 console.log("deletion successful");
                 setFormSubmittedBoolean(!formSubmittedBoolean);

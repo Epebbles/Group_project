@@ -67,6 +67,7 @@ const RentalForm = (props) => {
                     <input
                         type="text"
                         name="location"
+                        id="location"
                         onChange={(e) => setPrice(e.target.value)}
                         value={price}
                     />
@@ -76,6 +77,7 @@ const RentalForm = (props) => {
                     <input
                         type="text"
                         name="price"
+                        id="price"
                         onChange={(e) => setPrice(e.target.value)}
                         value={price}
                     />
@@ -85,6 +87,7 @@ const RentalForm = (props) => {
                     <input
                         type="text"
                         name="description"
+                        id="description"
                         onChange={(e) => setDescription(e.target.value)}
                         value={description}
                     />
