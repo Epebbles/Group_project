@@ -23,7 +23,7 @@ const createRental = (req, res) => {
 }
 
 const getOneRental = (req, res) => {
-    Rental.findOne({ _id: req.params.rentalId })
+    Rental.findOne({ _id: req.params.id})
         .then((rental) => res.json(rental))
         .catch((err) => res.status(400).json({error: err}));
 }
@@ -39,7 +39,7 @@ const editRental = (req, res) => {
 }
 
 const deleteRental = (req, res) => {
-    Rental.deleteOne({ _id: req.params.rentalId })
+    Rental.deleteOne({ _id: req.params.id})
         .then((deleteConfirm) => res.json(deleteConfirm))
         .catch((err) => res.status(200).json({error: err}));
 }

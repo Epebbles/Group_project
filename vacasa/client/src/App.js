@@ -19,7 +19,7 @@ function App() {
         <VacasaMain path="/vacasa"/>
         <EditRental path="/vacasa/edit/:vacasaId"/>
         <Edit path="/vacasa/:vacasaId/edit"/>
-        <Details path="/vacasa/:vacasaId" />
+        <Details path="/vacasa/:id"/>
       </Router>
 
     </div>

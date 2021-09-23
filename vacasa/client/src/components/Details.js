@@ -1,19 +1,28 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "@reach/router";
+import { navigate, Link } from "@reach/router";
 
 const Details = (props) => {
-    const {rentalId} = props;
+    const {id} = props;
     const [rentalInfo, setRentalInfo] = useState();
-
     useEffect (() => {
-        axios.get(`http://localhost:8000/api/vacasa/${rentalId}`)
+        axios.get(`http://localhost:8000/api/vacasa/${id}`)
             .then((queriedrental) => {
                 console.log(queriedrental.data);
-                setRentalInfo(queriedrental);
+                setRentalInfo(queriedrental.data);
             })
             .catch((err) => console.log(err.res))
     }, []);
+
+    const deleteRental = (id) => {
+        axios.delete(`http://localhost:8000/api/vacasa/${id}`)
+            .then((res) => {
+                console.log("deletion successful");
+                navigate("/vacasa")
+                // setFormSubmittedBoolean(!formSubmittedBoolean);
+            })
+            .catch((err) => console.log("error deleting rental", err));
+    };
     
     return (
         <>
@@ -36,6 +45,7 @@ const Details = (props) => {
                             </tr>
                         </tbody>
                     </table>
+                    <button onClick={() => deleteRental(rentalInfo._id)}>DELETE</button>
                 </div>
             ) : (
                 <h1>Can you smell the salty air yet?</h1>
@@ -44,4 +54,4 @@ const Details = (props) => {
     );
 };
 
-export default Details
+export default Details;

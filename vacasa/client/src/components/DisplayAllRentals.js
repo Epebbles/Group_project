@@ -18,14 +18,7 @@ const DisplayAllRentals = (props) => {
             .catch((err) => console.log(err));
     }, [formSubmittedBoolean]);
 
-    const deleteRental = (id) => {
-        axios.delete(`http://localhost:8000/api/vacasa/${id}`)
-            .then((res) => {
-                console.log("deletion successful");
-                setFormSubmittedBoolean(!formSubmittedBoolean);
-            })
-            .catch((err) => console.log("error deleting rental", err));
-    };
+
     return (
         <div>
             <h1>Display All Rentals</h1>
@@ -42,7 +35,6 @@ const DisplayAllRentals = (props) => {
                         <p>{rental.location}</p>
                         <p>{rental.price}</p>
                         <p>{rental.description}</p>
-                        <button onClick={() => deleteRental(rental._id)}>DELETE</button>
                         <hr />
                     </div>
                 ))}
