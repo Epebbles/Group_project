@@ -7,7 +7,7 @@ const DisplayAllRentals = (props) => {
     const [rentals, setRentals] = useState([]);
 
     useEffect(() => {
-        console.log("useeffect triggered");
+        console.log("useEffect triggered");
         axios.get("http://localhost:8000/api/vacasa")
             .then(
                 (allRentals) => {
