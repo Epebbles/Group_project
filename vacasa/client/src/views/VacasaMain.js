@@ -8,6 +8,7 @@ const VacasaMain = () => {
     return (
         <div>
             <Header />
+            <hr/>
             <RentalForm
                 formSubmittedBoolean={formSubmittedBoolean}
                 setFormSubmittedBoolean={setFormSubmittedBoolean}

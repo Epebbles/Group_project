@@ -24,7 +24,7 @@ const DisplayAllRentals = (props) => {
                 console.log("deletion successful");
                 setFormSubmittedBoolean(!formSubmittedBoolean);
             })
-            .catch((err) => console.log("error deleting restaurant", err));
+            .catch((err) => console.log("error deleting rental", err));
     };
     return (
         <div>
@@ -38,7 +38,7 @@ const DisplayAllRentals = (props) => {
                         <Link to={`/vacasa/${rental._id}`}>DISPLAY RENTALS INFO</Link>
                         <p>{rental.name}</p>
                         <img src={rental.photoUrl} alt="" />
-                        {/* When button clicked, ignite deleteRestaurant function with restaurant _id */}
+                        {/* When button clicked, ignite deleteRental function with rental _id */}
                         <p>{rental.location}</p>
                         <p>{rental.price}</p>
                         <p>{rental.description}</p>

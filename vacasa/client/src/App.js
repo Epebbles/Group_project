@@ -6,6 +6,8 @@ import Register from './components/Register';
 import LoginReg from './views/LoginReg';
 import VacasaMain from './views/VacasaMain';
 import EditRental from './components/EditRental';
+import Details from './components/Details';
+import Edit from './views/Edit';
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
         <Register path="/register"/>
         <LoginReg default path="/loginreg"/>
         <VacasaMain path="/vacasa"/>
-        <EditRental path="/vacasa/:vacasaId/edit"/>
+        <EditRental path="/vacasa/edit/:vacasaId"/>
+        <Edit path="/vacasa/:vacasaId/edit"/>
+        <Details path="/vacasa/:vacasaId" />
       </Router>
 
     </div>
