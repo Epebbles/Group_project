@@ -21,11 +21,11 @@ const Login = () => {
             console.log(response.cookie);
             console.log(response);
             setSuccessMsg(response.data.message)
-            navigate("/api/vacasa");
+            navigate("/vacasa");
         })
         .catch((err) => {
             console.log(err.response);
-            setErrMsg(err.response.data.err)
+            setErrMsg(err.response)
         });
     };
 

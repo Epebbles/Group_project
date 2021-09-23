@@ -11,11 +11,11 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Login path="login"/>
-        <Register path="register"/>
-        <LoginReg path="loginreg"/>
-        <VacasaMain path="/api/vacasa"/>
-        <EditRental path="/api/vacasa/:vacasaId/edit"/>
+        <Login path="/login"/>
+        <Register path="/register"/>
+        <LoginReg default path="/loginreg"/>
+        <VacasaMain path="/vacasa"/>
+        <EditRental path="/vacasa/:vacasaId/edit"/>
       </Router>
 
     </div>

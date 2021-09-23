@@ -25,10 +25,10 @@ const Register = () => {
             });
             // navigate("/loginreg");
         } catch (err) {
-            // console.log("ERROR BLOCK")
-            // console.log(err);
-            console.log(err.response.data);
-            const errorResponse = err.response.data.error;
+            console.log("ERROR BLOCK")
+            console.log(err);
+            console.log(err.response);
+            const errorResponse = err.response;
             setErr(errorResponse);
         }
     };
