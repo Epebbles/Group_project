@@ -8,8 +8,11 @@ const Details = (props) => {
 
     useEffect (() => {
         axios.get(`http://localhost:8000/api/vacasa/${rentalId}`)
-            .then((res) => setRentalInfo(res.data))
-            .catch((err) => console.log(err.response))
+            .then((queriedrental) => {
+                console.log(queriedrental.data);
+                setRentalInfo(queriedrental);
+            })
+            .catch((err) => console.log(err.res))
     }, []);
     
     return (
