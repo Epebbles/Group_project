@@ -4,13 +4,11 @@ import { Link } from "@reach/router";
 
 const Details = (props) => {
     const {rentalId} = props;
-    const [rentalInfo, setRentalInfo] = useState({});
+    const [rentalInfo, setRentalInfo] = useState();
 
-    useEffect ((id) => {
-        axios.get("http://localhost:8000/api/vacasa/" + rentalId)
-            .then((res) => setRentalInfo({
-                ...res.data
-                }))
+    useEffect (() => {
+        axios.get(`http://localhost:8000/api/vacasa/${rentalId}`)
+            .then((res) => setRentalInfo(res.data))
             .catch((err) => console.log(err.response))
     }, []);
     

@@ -38,6 +38,7 @@ const EditRental = (props) => {
     };
     return (
         <div>
+            <h1>Edit Rental</h1>
             <form onSubmit={handleSubmitUpdate}>
                 <div>
                     Name: {" "}
