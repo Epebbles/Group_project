@@ -26,7 +26,7 @@ const Header = (props) => {
     return (
         <div className="header">
             <h1>Welcome to your next vacation</h1>
-            <p><Link to="/login">Login</Link>  | <span /> <Link to="/register">Register</Link>  |  <span /> <Link to="/vacasa">Home Page</Link></p>
+            <p><Link to="/login">Returning User?</Link>  | <span /> <Link to="/register">New to our site?</Link>  |  <span /> <Link to="/vacasa">Home Page</Link></p>
             <p><button style={blueStyle} onClick={(e) => Logout(e)}>Logout</button></p>
             <hr/>
         </div>

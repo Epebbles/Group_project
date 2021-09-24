@@ -45,6 +45,12 @@ const RentalForm = (props) => {
                 }
             );
     };
+
+    const greenStyle = {
+        backgroundColor: "green",
+        color: "white",
+        width: "120px",
+    }
     return (
         <>
             <h2>Rental Form</h2>
@@ -119,7 +125,7 @@ const RentalForm = (props) => {
                         value={description}
                     />
                 </div>
-                <button type="submit">Add Property</button>
+                <button type="submit" style={greenStyle}>Add Property</button>
             </form>
             {errors
                 ? Object.keys(errors).map((objKey, index) => (

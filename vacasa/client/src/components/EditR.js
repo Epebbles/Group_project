@@ -29,7 +29,7 @@ const EditR = (props) => {
                 console.log("Update Successful");
                 console.log(rental.name);
                 console.log(res);
-                navigate("/vacasa");
+                navigate("/api/vacasa");
             })
             .catch(err => {
                 console.log("This form has errors");
@@ -42,7 +42,7 @@ const EditR = (props) => {
     return (
         <>
             <Header />
-            <div className="table-left">
+            <div className="table-center">
                 <h1>Edit this booking?</h1>
                 {loaded && (
                     <RentalForm
