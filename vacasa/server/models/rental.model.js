@@ -8,6 +8,14 @@ const RentalSchema = new mongoose.Schema({
         type: String,
         required: [true, "Image is required"],
     },
+    checkinDate: {
+        type: Date,
+        required: [true, "Check-in Date is required"],
+    },
+    checkoutDate: {
+        type: Date,
+        required: [true, "Check-out Date is required"],
+    },
     location: {
         type: String,
         required: [true, "Location is required"],

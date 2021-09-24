@@ -6,6 +6,8 @@ const RentalForm = (props) => {
     const [name, setName] = useState("");
     const [photoUrl, setPhotoUrl] = useState("");
     const [location, setLocation] = useState("");
+    const [checkinDate, setCheckinDate] = useState("");
+    const [checkoutDate, setCheckoutDate] = useState("");
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
     const [errors, setErrors] = useState({});
@@ -17,6 +19,8 @@ const RentalForm = (props) => {
         const newRentalData = {
             name,
             location,
+            checkinDate,
+            checkoutDate,
             price,
             description,
             photoUrl,
@@ -26,10 +30,13 @@ const RentalForm = (props) => {
                 console.log(newRental)
                 setName("");
                 setPhotoUrl("");
+                setCheckinDate("");
+                setCheckoutDate("");
                 setLocation("");
                 setPrice("");
                 setDescription("");
                 setFormSubmittedBoolean(!formSubmittedBoolen);
+                navigate="/vacasa"
             })
             .catch((err) =>
                 {
@@ -60,6 +67,26 @@ const RentalForm = (props) => {
                         name="photoUrl"
                         onChange={(e) => setPhotoUrl(e.target.value)}
                         value={photoUrl}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="checkinDate">Check-in Date: </label>
+                    <input
+                        id="checkinDate"
+                        type="date"
+                        name="checkinDate"
+                        onChange={(e) => setCheckinDate(e.target.value)}
+                        value={checkinDate}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="checkoutDate">Check-out Date: </label>
+                    <input
+                        id="checkoutDate"
+                        type="date"
+                        name="checkoutDate"
+                        onChange={(e) => setCheckoutDate(e.target.value)}
+                        value={checkoutDate}
                     />
                 </div>
                 <div>

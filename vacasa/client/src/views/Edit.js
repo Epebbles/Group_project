@@ -1,5 +1,5 @@
 import React from "react";
-import EditRental from "../components/EditRental";
+import EditR from "../components/EditR";
 import Header from "../components/Header";
 
 const Edit = () => {
@@ -7,7 +7,7 @@ const Edit = () => {
         <div className="container">
             <Header />
             <hr/>
-            <EditRental />
+            <EditR />
         </div>
     )
 };

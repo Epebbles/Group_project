@@ -12,7 +12,7 @@ const Details = (props) => {
                 setRentalInfo(queriedrental.data);
             })
             .catch((err) => console.log(err.res))
-    }, []);
+    }, [id]);
 
     const deleteRental = (id) => {
         axios.delete(`http://localhost:8000/api/vacasa/${id}`)

@@ -6,17 +6,10 @@ import Login from './components/Login';
 import Register from './components/Register';
 import LoginReg from './views/LoginReg';
 import VacasaMain from './views/VacasaMain';
-import EditRental from './components/EditRental';
 import Details from './components/Details';
 import RentalDetails from './views/RentalDetails';
 import Edit from './views/Edit';
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-  integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-  crossorigin="anonymous"
-/>
-
+import EditR from './components/EditR';
 
 function App() {
   return (
@@ -26,8 +19,8 @@ function App() {
         <Register path="/register"/>
         <LoginReg path="/loginreg"/>
         <VacasaMain default path="/vacasa"/>
-        <EditRental path="/vacasa/edit/:vacasaId"/>
-        <Edit path="/vacasa/:vacasaId/edit"/>
+        <Edit path="/edit" />
+        <EditR path="/vacasa/:id/edit"/>
         {/* <RentalDetails path="/vacasa/:id"/> */}
         <Details path="/vacasa/:id"/>
       </Router>

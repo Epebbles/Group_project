@@ -7,10 +7,12 @@ const getAllRentals = (req, res) => {
 }
 
 const createRental = (req, res) => {
-    const { name, photoUrl, location, price, description } = req.body;
+    const { name, photoUrl, checkinDate, checkoutDate, location, price, description } = req.body;
     Rental.create({
         name,
         photoUrl,
+        checkinDate,
+        checkoutDate,
         location,
         price,
         description,

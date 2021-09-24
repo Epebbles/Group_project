@@ -27,6 +27,8 @@ const DisplayAllRentals = (props) => {
                     <div key={index}>
                         <p>For more details about this listing: <Link to={`/vacasa/${rental._id}`}>{rental.name}</Link></p>
                         <p><img src={rental.photoUrl} alt="" /></p>
+                        <p>{rental.checkinDate}</p>
+                        <p>{rental.checkoutDate}</p>
                         <p>{rental.location}</p>
                         <p>{rental.price}</p>
                         <p>{rental.description}</p>
