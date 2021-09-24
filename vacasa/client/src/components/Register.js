@@ -23,7 +23,7 @@ const Register = () => {
             await axios.post("http://localhost:8000/api/user/register", postData, {
                 withCredentials: true,
             });
-            // navigate("/loginreg");
+            navigate("/login");
         } catch (err) {
             console.log("ERROR BLOCK")
             // console.log(err);

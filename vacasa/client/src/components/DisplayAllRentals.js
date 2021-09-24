@@ -25,13 +25,8 @@ const DisplayAllRentals = (props) => {
             {rentals.length > 0 &&
                 rentals.map((rental, index) => (
                     <div key={index}>
-                        <h2>
-                            <Link to={`/vacasa/${rental._id}/edit`}>EDIT</Link>
-                        </h2>
-                        <Link to={`/vacasa/${rental._id}`}>DISPLAY RENTALS INFO</Link>
-                        <p>{rental.name}</p>
-                        <img src={rental.photoUrl} alt="" />
-                        {/* When button clicked, ignite deleteRental function with rental _id */}
+                        <p>For more details about this listing: <Link to={`/vacasa/${rental._id}`}>{rental.name}</Link></p>
+                        <p><img src={rental.photoUrl} alt="" /></p>
                         <p>{rental.location}</p>
                         <p>{rental.price}</p>
                         <p>{rental.description}</p>

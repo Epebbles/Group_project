@@ -17,13 +17,18 @@ const Header = (props) => {
         });
     };
 
+    const blueStyle = {
+        backgroundColor: "#0066b2",
+        color: "white",
+        width: "120px",
+    }
+
     return (
         <div className="header">
             <h1>Welcome to your next vacation</h1>
-            <Link to="/vacasa">Home Page</Link>
-            <button onClick={(e) => Logout(e)}>Logout</button>
+            <p><Link to="/login">Login</Link>  | <span /> <Link to="/register">Register</Link>  |  <span /> <Link to="/vacasa">Home Page</Link></p>
+            <p><button style={blueStyle} onClick={(e) => Logout(e)}>Logout</button></p>
             <hr/>
-            
         </div>
     )
 };

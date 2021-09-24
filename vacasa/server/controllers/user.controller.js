@@ -54,7 +54,7 @@ const login = async (req, res) => {
 const logout = (req, res) => {
     console.log("logging out");
     res.clearCookie("usertoken");
-    res.json({ message: "Thank you for your beer" });
+    res.json({ message: "Appreciate your stay!" });
 };
 
 module.exports = {

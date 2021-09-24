@@ -45,7 +45,10 @@ const Details = (props) => {
                             </tr>
                         </tbody>
                     </table>
-                    <button onClick={() => deleteRental(rentalInfo._id)}>DELETE</button>
+                    <p><button onClick={() => deleteRental(rentalInfo._id)}>DELETE</button>  |  <span/>  
+                    <Link to={`/vacasa/${id}/edit`}>Edit {rentalInfo.name}?</Link>  |  <span/>
+                    <Link to="/vacasa">Home Page</Link></p>
+
                 </div>
             ) : (
                 <h1>Can you smell the salty air yet?</h1>

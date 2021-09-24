@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 const Edit = () => {
     return (
-        <div className="container-fluid">
+        <div className="container">
             <Header />
             <hr/>
             <EditRental />

@@ -21,8 +21,9 @@ const RentalForm = (props) => {
             description,
             photoUrl,
         };
-        axios.post("http://localhost:8000/api/vacasa", newRentalData)
+        axios.post("http://localhost:8000/api/vacasa/", newRentalData)
             .then((newRental) => {
+                console.log(newRental)
                 setName("");
                 setPhotoUrl("");
                 setLocation("");
@@ -91,7 +92,7 @@ const RentalForm = (props) => {
                         value={description}
                     />
                 </div>
-                <button>Add</button>
+                <button type="submit">Add Property</button>
             </form>
             {errors
                 ? Object.keys(errors).map((objKey, index) => (

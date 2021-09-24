@@ -36,6 +36,12 @@ const EditRental = (props) => {
             .then((updatedDoc) => navigate("/api/vacasa"))
             .catch((err) => console.log(err));
     };
+
+    const greenStyle = {
+        backgroundColor: "green",
+        color: "white",
+        width: "120px",
+    }
     return (
         <div>
             <h1>Edit Rental</h1>
@@ -85,7 +91,8 @@ const EditRental = (props) => {
                         value={description}
                     />
                 </div>
-                <button>SUBMIT EDIT</button>
+                <hr/>
+                <button type="submit" style={greenStyle}>SUBMIT EDIT</button>
             </form>
         </div>
     );

@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import Header from "../components/Header";
 import Details from "../components/Details";
 
 const RentalDetails = () => {
     return (
-        <div className="container-flex">
+        <div className="container">
             <Header />
             <hr/>
             <Details />

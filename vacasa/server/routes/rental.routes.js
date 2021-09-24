@@ -5,6 +5,6 @@ module.exports = (app) => {
     app.get('/api/vacasa', RentalController.getAllRentals);
     app.post('/api/vacasa', RentalController.createRental);
     app.get('/api/vacasa/:id', RentalController.getOneRental);
-    app.put('/api/vacasa/:vacasaId', RentalController.editRental);
+    app.put('/api/vacasa/:id', RentalController.editRental);
     app.delete('/api/vacasa/:id', RentalController.deleteRental);
 }
